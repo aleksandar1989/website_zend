@@ -1,0 +1,79 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Code Prettifier</title>
+<script>(function () {
+  var sourceBaseUrl = "./src/";
+  var sources = [
+      "prettify.js",
+      "lang-css.js",
+      "lang-erlang.js",
+      "lang-go.js",
+      "lang-hs.js",
+      "lang-lisp.js",
+      "lang-lua.js",
+      "lang-ml.js",
+      "lang-proto.js",
+      "lang-scala.js",
+      "lang-sql.js",
+      "lang-wiki.js",
+      "lang-vhdl.js",
+      "lang-vb.js",
+      "lang-yaml.js",
+  ];
+  var styles = [
+      "prettify.css"
+  ];
+  if (window.console) {
+    console.log("sourceBaseUrl=" + sourceBaseUrl);
+  }
+  for (var i = 0; i < sources.length; ++i) {
+    document.write(
+        "<script src=\"" + sourceBaseUrl + sources[i] + "\"><\/script>");
+  }
+  for (var i = 0; i < styles.length; ++i) {
+    document.write(
+        "<link rel=\"stylesheet\" href=\"" + sourceBaseUrl + styles[i] + "\">");
+  }
+})();
+</script>
+
+<script src="tests/test_base.js" type="text/javascript"
+ onerror="alert('Error: failed to load ' + this.src)"></script>
+<link rel="stylesheet" type="text/css" href="tests/test_styles.css" />
+</head>
+<body onload="go(goldens)" bgcolor="white">
+<h1>PHP</h1>
+<pre class="prettyprint" id="PHP">
+&lt;html>
+  &lt;head>
+    &lt;title>&lt;?= 'Fibonacci numbers' ?>&lt;/title>
+
+    &lt;?php
+      // PHP has a plethora of comment types
+      /* What is a
+         "plethora"? */
+      function fib($n) {
+        # I don't know.
+        $a = 1;
+        $b = 1;
+        while (--$n >= 0) {
+          echo "$a\n";
+          $tmp = $a;
+          $a += $b;
+          $b = $tmp;
+        }
+      }
+    ?>
+  &lt;/head>
+  &lt;body>
+    &lt;?= fib(10) ?>
+  &lt;/body>
+&lt;/html>
+</pre> 
+</body>
+
+<script type="text/javascript" src="goldens.js">
+
+</script>
+</html>

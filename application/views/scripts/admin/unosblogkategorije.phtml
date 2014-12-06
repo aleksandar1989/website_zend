@@ -1,0 +1,76 @@
+<div class="row">
+    <div class="col-md-12">
+            <div class="panel panel-archon">
+                    <div class="panel-heading">
+                            <h3 class="panel-title">
+                                    Unos Blog kategorija
+                                    <span class="pull-right">
+                                            <a  href="#" class="panel-minimize"><i class="icon-chevron-up"></i></a>
+                                    </span>
+                            </h3>
+                    </div>
+                    <div class="panel-body">
+                        
+                        <?php
+                            print $this->form;
+                            
+                            if(isset($this->status)){
+            
+                                if($this->status){
+                                    ?>
+                                        <p class="bg-success">Podkategorija je uspešno uneta.</p>
+                                    <?php
+                                }else{
+                                    ?>
+                                        <p class="bg-danger">Podkategorija nije uneta.</p>
+                                    <?php
+                                }
+
+                            }
+                        ?>
+                                        
+                   
+                        
+                        
+<!--                            <form class="form-inline" role="form">
+                                    <div class="form-group col-lg-7">
+                                            <label class="sr-only" for="email">Email address</label>
+                                            <input type="email" class="form-control" id="email" placeholder="Enter email">
+                                    </div>
+                                   
+                                    
+                                    <button type="submit" class="col-lg-2 btn btn-default">Sign in</button>
+                            </form>							-->
+                    </div>
+               
+            </div>
+          <table class="table table-bordered table-hover table-striped tablesorter">
+            <tr>
+                <th>
+                    ID
+                </th>
+                <th>
+                    Naziv
+                </th>
+                <th>                    
+                </th>
+            </tr>
+            <?php
+                  foreach ($this->get_blog_kategorije as $kat) {
+                    echo '<tr>';                        
+                        echo '<td>';
+                            echo $kat['id_blog_kat'];
+                        echo '</td>';
+                        echo '<td>';
+                            echo $kat['naziv_kategorije'];
+                        echo '</td>';
+                            echo '<td>';
+                            echo '<a href="/admin/obrisiblogkategoriju/id/'.$kat['id_blog_kat'].'" onclick="return confirm('."'Da li ste sigurni?'".');">Delete</a>';
+                        echo '</td>';
+                      
+                    echo '</tr>';
+                  }
+            ?>
+        </table>
+    </div>
+</div>

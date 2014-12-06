@@ -1,0 +1,41 @@
+<?php if($this->last==0){ ?>
+    <span class="no-result">Nema rezultata.</span>
+<?php }else{ ?>
+<div class="" style="width:100%;">
+    <ul class="pagination">
+        <!-- First page link -->
+         <!--  <?php if (isset($this->previous)){ ?>
+              <a href="?i=<?php print $this->first; ?>" class="page">Prva</a>
+                <?php }else{ ?>
+                        <span class="disabled page">Prva</span>
+                <?php } ?>
+             -->
+    
+        <!-- Previous page link -->
+    
+        <?php if (isset($this->previous)){ ?>
+              <li class="prev"> <a href="/blog/page/<?php print $this->previous; ?>" class="page">&lt; Prethodna</a></li>
+        <?php }else{ ?>
+           <li class="prev"> <span class="disabled page">&lt; Prethodna</span></li>
+        <?php } ?>
+        <!-- Numbered page links -->
+        <?php foreach ($this->pagesInRange as $page){ ?>
+            <?php if ($page != $this->current){ ?>
+                <li><a href="/blog/page/<?php print $page; ?>" class="page"><?php print $page; ?></a></li>
+            <?php }else{ ?>
+                <?php print '<span class="current">'.$page.'</span>'; ?>
+            <?php } ?>
+        <?php } ?>
+        <!-- Next page link -->
+        <?php if (isset($this->next)){ ?>
+        <li class="next"><a href="/blog/page/<?php print $this->next; ?>" class="page">Sledeća &gt;</a></li>
+        <?php }else{ ?>
+           <li class="next"><span class="disabled">Sledeća &gt;</span></li>
+        <?php } ?>
+        <!-- Last page link -->
+
+    </ul>
+ </div>
+<?php } ?>
+
+    

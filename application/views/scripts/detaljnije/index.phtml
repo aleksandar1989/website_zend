@@ -1,0 +1,168 @@
+    <link rel="stylesheet" href="/css/flexslider.css" type="text/css">   
+    <!-- Pretty Photo -->
+    <script src="/js/jquery.prettyPhoto.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" charset="utf-8">
+                       $(document).ready(function(){
+       $("area[rel^='prettyPhoto']").prettyPhoto();
+
+       $(".portfolio:first a[rel^='prettyPhoto']").prettyPhoto({animation_speed:'fast',theme:'pp_default',slideshow:4000, opacity: 0.50, deeplinking: false, overlay_gallery: false, autoplay_slideshow: false});
+
+    });
+	</script>
+    <!-- /Pretty Photo -->
+    
+    <!-- FlexSlider -->    
+    <script src="/js/jquery.flexslider.js"></script>
+
+	<script type="text/javascript">
+            $(function(){
+              SyntaxHighlighter.all();
+            });
+            $(window).load(function(){
+              $('.flexslider').flexslider({
+                animation: "fade",
+                start: function(slider){
+                  $('body').removeClass('loading');
+                }
+              });
+            });
+	</script>
+    <!-- /FlexSlider -->
+    
+
+    <!-- Content -->
+   
+    
+    <div id="content" class="container clearfix">
+ 
+         
+        <!-- Page title -->
+        <nav id="page-title" >
+        	<p><a href="#" class="next"><img src="/images/slider-control-right.png" alt="" /></a></p>
+            <p><a href="#" class="next"><img src="/images/slider-control-list.png" alt="" /></a></p>
+            <p><a href="#" class="next"><img src="/images/slider-control-left.png" alt="" /></a></p>
+        	<h1><?= $this->detaljnije['naziv_projekta'];?></h1>
+        	
+        </nav>
+        <!-- /Page title -->
+        
+        
+        
+        <!-- Main Content -->
+        <div id="main">
+        
+        
+        
+        	<!-- Project image -->
+            <div class="project-image portfolio"> 
+                           
+            	
+                
+                <div class="flexslider">
+                  <ul class="slides">
+                      
+                      <?php
+                      foreach ($this->detaljnije['slike'] as $value) {
+                          echo '<li>';
+                            echo '<a href="/images/portfolio/'.$value['naziv_slike'].'" rel="prettyPhoto[portfolio]"><img src="/images/portfolio/'.$value['naziv_slike'].'" /></a>';
+                          echo '</li>';
+                      }
+                      ?>
+<!--                    	<li>
+                        <a href="/images/portfolio-img1.jpg" rel="prettyPhoto[portfolio]"><img src="/images/portfolio-img1.jpg" /></a>                        
+                        </li>
+                        
+                        
+                        <li>
+                        <a href="/images/portfolio-img2.jpg" rel="prettyPhoto[portfolio]"><img src="/images/portfolio-img2.jpg" /></a>                     
+                        </li>
+                        
+                        <li>
+                        <a href="/images/portfolio-img1.jpg" rel="prettyPhoto[portfolio]"><img src="/images/portfolio-img3.jpg" /></a>                        
+                        </li>                       
+                        -->
+                  </ul>
+                </div>
+                
+                    
+                    
+                    
+                </div>
+                <!-- /Project image -->
+            
+            
+
+            
+            
+    
+            
+            
+            
+        <!-- Main Content -->
+        </div>
+
+            
+            <!-- Sidebar -->
+        <div id="sidebar">
+        
+        
+        
+        	 <!-- Opis -->
+            <div class="widget">
+                <h4>Opis projekta</h4>
+                <p>
+                    <?= $this->detaljnije['opis_projekta']; ?>
+                </p>
+            </div>
+            <!-- /Opis -->
+            
+            
+            
+			
+            
+
+            <!-- What we did -->
+            <div class="widget">
+                <h4>What we did</h4>
+                <ul class="categories">
+                    <li><a href="#">eCommerce</a></li>
+                    <li><a href="#">Flash Animation & Ads</a></li>
+                    <li><a href="#">TV Advertising</a></li>
+                    <li><a href="#">iPhone & iPad App Design</a></li>
+                    <li><a href="#">Dynamic Online Magazines</a></li>
+                    <li><a href="#">Email marketing</a></li>
+                </ul>
+            </div>
+            <!-- /What we did -->
+            
+            
+            
+            
+            
+            <!-- Visit website -->
+            <a class="btn-image" href="<?= $this->detaljnije['link_projekta']; ?>">Visit website</a>
+            <!-- /Visit website -->
+            
+            
+
+            
+
+        </div>
+        <!-- /Sidebar -->
+            
+            
+            
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+    </div>
+    <!-- /Content -->

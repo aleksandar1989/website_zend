@@ -1,0 +1,289 @@
+    <script type="text/javascript" src="/js/jquery-1.6.2.min.js"></script>
+    <script type="text/javascript" src="/js/jquery.prettyPhoto.js"></script> 
+    <script type="text/javascript" src="/js/jquery.quicksand.js"></script> 
+    <script type="text/javascript" src="/js/jquery.easing.1.3.js"></script> 
+    <script type="text/javascript" src="/js/script.js"></script>
+
+    
+    <!-- Back to top -->
+            <script>
+        $(document).ready(function(){
+
+            // hide #back-top first
+            $("#back-top").hide();
+
+            // fade in #back-top
+            $(function () {
+                $(window).scroll(function () {
+                    if ($(this).scrollTop() > 100) {
+                        $('#back-top').fadeIn();
+                    } else {
+                        $('#back-top').fadeOut();
+                    }
+                });
+
+                // scroll body to 0px on click
+                $('#back-top a').click(function () {
+                    $('body,html').animate({
+                        scrollTop: 0
+                    }, 800);
+                    return false;
+                });
+            });
+
+        });
+        </script>
+        <!-- /Back to top -->
+<!-- Content -->
+    <div id="content" class="container clearfix">
+    
+    
+    
+    
+            <!-- Back to top -->
+            <p id="back-top" style="display: block;">
+                <a href="#top"><span></span></a>
+            </p>
+            <!-- /Back to top -->    
+
+        	<ul class="filter group"> 
+				<li class="current all"><a href="#" style="text-transform:uppercase;">ALL WEBSITES</a></li>
+                                <?php
+                                    $kategorije = new Application_Model_Kategorije();
+                                    $get_kat = $kategorije->get_kategorije();
+                                    
+                                    foreach ($get_kat as $kat) {
+                                        echo '<li class="'.$kat['naziv_kategorije'].'"><a href="#" style="text-transform:uppercase;">'.$kat['naziv_kategorije'].'</a></li> ';
+                                    }
+                                ?>
+
+			</ul> 
+        
+        
+        <!-- Projects 3 columns -->
+        <div id="projects3">       
+        	
+	<ul class="portfolio group"> 
+            <?php
+                $projekti = new Application_Model_Projekti();
+                $get_projekti = $projekti->get_projekti();
+                
+                foreach($get_projekti as $key => $projekat){
+                    $projekti = new Application_Model_Projekti();
+                    $get_kategorija = $kategorije->get_kategorija($projekat['id_kategorije']);
+                    $get_slika_projekta = $projekti->get_slike_projekta($projekat['id_projekta']);
+                            
+                    echo '<li class="item" data-id="id-'.($key+1).'" data-type="'.$get_kategorija['naziv_kategorije'].'">';
+                        echo '<div class="view overlay">';
+                            echo ' <img src="/images/portfolio/'.$get_slika_projekta[0]['naziv_slike'].'" width="320px" height="236px" alt="title here" />';
+                            
+                            echo '<a href="/detaljnije/'.$projekat['id_projekta'].'" >';
+                                echo '<div class="mask">';
+                                    echo '<h3>'.$projekat['naziv_projekta'].'</h3>';
+                                    echo '<p>'.$get_kategorija['naziv_kategorije'].'</b></p>';
+                                echo '</div>';
+                            echo '</a>';
+                        echo '</div>';
+                    echo '</li>';
+                } 
+            ?>
+            
+                
+<!--                <li class="item" data-id="id-2" data-type="PHP">
+                    
+                    <div class="view overlay">
+                        <img src="images/portfolio/2_thumb.jpg" alt="title here" />
+                        
+                        <a href="portfolio_details.html" >
+                            <div class="mask">
+                                <h3>Project title</h3>
+                                <p>Web Design, Branding<br><b>2012</b></p>                            
+                            </div>
+                        </a>
+                        
+                        <a href="images/portfolio/2.jpg" rel="prettyPhoto[portfolio]"><div class="info"><img src="images/zoom.png" /></div></a>
+                        
+                    </div>
+                      
+                </li>
+                
+                
+                
+                <li class="item" data-id="id-3" data-type="branding">
+                    
+                    <div class="view overlay">
+                        <img src="images/portfolio/3_thumb.jpg" alt="title here" />
+                        
+                        <a href="portfolio_details.html" >
+                            <div class="mask">
+                                <h3>Project title</h3>
+                                <p>Web Design, Branding<br><b>2012</b></p>                            
+                            </div>
+                        </a>
+                        
+                        <a href="images/portfolio/3.jpg" rel="prettyPhoto[portfolio]"><div class="info"><img src="images/zoom.png" /></div></a>
+                        
+                    </div>
+                      
+                </li>
+                
+                
+                
+                <li class="item" data-id="id-4" data-type="marketing">
+                    
+                    <div class="view overlay">
+                        <img src="images/portfolio/4_thumb.jpg" alt="title here" />
+                        
+                        <a href="portfolio_details.html" >
+                            <div class="mask">
+                                <h3>Project title</h3>
+                                <p>Web Design, Branding<br><b>2012</b></p>                            
+                            </div>
+                        </a>
+                        
+                        <a href="images/portfolio/4.jpg" rel="prettyPhoto[portfolio]"><div class="info"><img src="images/zoom.png" /></div></a>
+                        
+                    </div>
+                      
+                </li>
+                
+                
+                
+                <li class="item" data-id="id-5" data-type="webdesign">
+                    
+                    <div class="view overlay">
+                        <img src="images/portfolio/5_thumb.jpg" alt="title here" />
+                        
+                        <a href="portfolio_details.html" >
+                            <div class="mask">
+                                <h3>Project title</h3>
+                                <p>Web Design, Branding<br><b>2012</b></p>                            
+                            </div>
+                        </a>
+                        
+                        <a href="images/portfolio/5.jpg" rel="prettyPhoto[portfolio]"><div class="info"><img src="images/zoom.png" /></div></a>
+                        
+                    </div>
+                      
+                </li>
+                
+                
+                
+                <li class="item" data-id="id-6" data-type="photo">
+                    
+                    <div class="view overlay">
+                        <img src="images/portfolio/6_thumb.jpg" alt="title here" />
+                        
+                        <a href="portfolio_details.html" >
+                            <div class="mask">
+                                <h3>Project title</h3>
+                                <p>Web Design, Branding<br><b>2012</b></p>                            
+                            </div>
+                        </a>
+                        
+                        <a href="images/portfolio/6.jpg" rel="prettyPhoto[portfolio]"><div class="info"><img src="images/zoom.png" /></div></a>
+                        
+                    </div>
+                      
+                </li>
+                
+                
+                
+                <li class="item" data-id="id-7" data-type="branding">
+                    
+                    <div class="view overlay">
+                        <img src="images/portfolio/7_thumb.jpg" alt="title here" />
+                        
+                        <a href="portfolio_details.html" >
+                            <div class="mask">
+                                <h3>Project title</h3>
+                                <p>Web Design, Branding<br><b>2012</b></p>                            
+                            </div>
+                        </a>
+                        
+                        <a href="images/portfolio/7.jpg" rel="prettyPhoto[portfolio]"><div class="info"><img src="images/zoom.png" /></div></a>
+                        
+                    </div>
+                      
+                </li>
+                
+                
+                
+                <li class="item" data-id="id-8" data-type="marketing">
+                    
+                    <div class="view overlay">
+                        <img src="images/portfolio/8_thumb.jpg" alt="title here" />
+                        
+                        <a href="portfolio_details.html" >
+                            <div class="mask">
+                                <h3>Project title</h3>
+                                <p>Web Design, Branding<br><b>2012</b></p>                            
+                            </div>
+                        </a>
+                        
+                        <a href="images/portfolio/8.jpg" rel="prettyPhoto[portfolio]"><div class="info"><img src="images/zoom.png" /></div></a>
+                        
+                    </div>
+                      
+                </li>
+                
+                
+                
+                <li class="item" data-id="id-9" data-type="webdesign">
+                    
+                    <div class="view overlay">
+                        <img src="images/portfolio/9_thumb.jpg" alt="title here" />
+                        
+                        <a href="portfolio_details.html" >
+                            <div class="mask">
+                                <h3>Project title</h3>
+                                <p>Web Design, Branding<br><b>2012</b></p>                            
+                            </div>
+                        </a>
+                        
+                        <a href="images/portfolio/9.jpg" rel="prettyPhoto[portfolio]"><div class="info"><img src="images/zoom.png" /></div></a>
+                        
+                    </div>
+                      
+                </li>
+                
+                
+                
+                <li class="item" data-id="id-10" data-type="photo">
+                    
+                    <div class="view overlay">
+                        <img src="images/portfolio/10_thumb.jpg" alt="title here" />
+                        
+                        <a href="portfolio_details.html" >
+                            <div class="mask">
+                                <h3>Project title</h3>
+                                <p>Web Design, Branding<br><b>2012</b></p>                            
+                            </div>
+                        </a>
+                        
+                        <a href="images/portfolio/10.jpg" rel="prettyPhoto[portfolio]"><div class="info"><img src="images/zoom.png" /></div></a>
+                        
+                    </div>
+                      
+                </li>
+                -->
+              
+
+                
+              
+            </ul>
+                
+            
+        
+            
+        
+        </div>
+        <!-- /Projects 3 columns -->
+        
+        
+        
+        
+    
+    </div>
+    <!-- /Content -->
+    

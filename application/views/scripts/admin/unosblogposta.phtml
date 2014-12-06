@@ -1,0 +1,107 @@
+   <!--ckeditor-->
+   
+   	<script src="/admin_template/ckeditor/ckeditor.js"></script>
+	<!--<link rel="stylesheet" href="/admin_template/ckeditor/sample.css">-->
+   
+   <!--/ckeditor-->
+
+<div class="row">
+    <div class="col-md-12">
+            <div class="panel panel-archon">
+                    <div class="panel-heading">
+                            <h3 class="panel-title">
+                                    Unos blog posta
+                                    <span class="pull-right">
+                                            <a  href="#" class="panel-minimize"><i class="icon-chevron-up"></i></a>
+                                    </span>
+                            </h3>
+                    </div>
+                    <div class="panel-body">
+                        
+                        <?php
+                            print $this->forma;
+                            
+                            if(isset($this->status)){
+            
+                                if($this->status){
+                                    ?>
+                                        <p class="bg-success">Post je uspešno unet.</p>
+                                    <?php
+                                }else{
+                                    ?>
+                                        <p class="bg-danger">Post nije uspesno unet.</p>
+                                    <?php
+                                }
+
+                            }
+                        ?>
+                                        
+                   
+                        
+                        
+<!--                            <form class="form-inline" role="form">
+                                    <div class="form-group col-lg-7">
+                                            <label class="sr-only" for="email">Email address</label>
+                                            <input type="email" class="form-control" id="email" placeholder="Enter email">
+                                    </div>
+                                   
+                                    
+                                    <button type="submit" class="col-lg-2 btn btn-default">Sign in</button>
+                            </form>							-->
+                    </div>
+               
+            </div>
+          <table class="table table-bordered table-hover table-striped tablesorter">
+            <tr>
+                <th>
+                    ID
+                </th>
+                <th>
+                    ID blog kategorije
+                </th>
+                <th>
+                    Naziv
+                </th>
+                <th>
+                    Opis
+                </th>
+                <th>
+                    Slika
+                </th>
+                <th>
+                    Vreme unosa
+                </th>
+                <th>                    
+                </th>
+            </tr>
+            <?php
+                  foreach ($this->get_posts as $pos) {
+                    echo '<tr>';  
+                        echo '<td>';
+                            echo $pos['id_posta'];
+                        echo '</td>';
+                        echo '<td>';
+                            echo $pos['id_blog_kat'];
+                        echo '</td>';
+                        echo '<td>';
+                            echo $pos['naziv_posta'];
+                        echo '</td>';
+                        echo '<td>';
+                            echo $pos['opis_posta'];
+                        echo '</td>';
+                        echo '<td>';
+                            echo $pos['slika_posta'];
+                        echo '</td>';
+                        echo '<td>';
+                            echo date('d-m-Y',$pos['vreme_unosa']);
+                        echo '</td>';
+                            echo '<td>';
+                            echo '<a href="/admin/obrisiblogpost/id/'.$pos['id_posta'].'/slika_posta/'.$pos['slika_posta'].'" onclick="return confirm('."'Da li ste sigurni?'".');">Delete</a>';
+                        echo '</td>';
+                      
+                    echo '</tr>';
+                  }
+            ?>
+        </table>
+    </div>
+</div>

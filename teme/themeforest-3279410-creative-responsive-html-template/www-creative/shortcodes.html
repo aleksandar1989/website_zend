@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <title>Shortcodes - Creative - Responsive HTML Template - ClaPat Studio</title>
+    
+    <meta name="description" content="">
+    <meta name="author" content="">
+    
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+	<link rel="alternate stylesheet" type="text/css" media="screen" title="green-theme" href="css/style-green.css" />
+	<link rel="alternate stylesheet" type="text/css" media="screen" title="orange-theme" href="css/style-orange.css" />
+    
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+    
+    
+    <!-- Css Switcher --> 
+    <script src="js/styleswitch.js" type="text/javascript"></script>
+    
+    
+    <!-- Progress bar animation-->
+    <script>
+		$(function() {
+			$(".meter > span").each(function() {
+				$(this)
+					.data("origWidth", $(this).width())
+					.width(0)
+					.animate({
+						width: $(this).data("origWidth")
+					}, 1200);
+			});
+		});
+	</script>
+    <!--/Progress bar animation-->
+    
+    
+    <!-- Accordion -->
+    <script type="text/javascript" src="js/accordion.js"> </script>
+    <!-- /Accordion -->
+	
+    
+    <!-- Responsive Navigation -->
+    <script src="js/selectnav.min.js"></script>
+    <!-- /Responsive Navigation -->
+    
+    
+    
+    <!-- Tabs -->
+    <script type="text/javascript" src="js/simpletabs_1.3.js"></script>
+    <!-- /Tabs -->
+    
+    
+	<!-- Carousel slider -->
+	<script src="js/carousel.js"></script>
+	<script>
+		$(document).ready(function() {
+			$('.slidewrap').carousel({
+				slider: '.slider',
+				slide: '.slide',
+				slideHed: '.slidehed',
+				nextSlide : '.next',
+				prevSlide : '.prev',
+				addPagination: false,
+				addNav : false
+			});
+			
+			
+		});
+	</script>
+    <!-- /Carousel slider -->
+    
+
+	<!-- Back to top -->
+	<script>
+    $(document).ready(function(){
+    
+        // hide #back-top first
+        $("#back-top").hide();
+        
+        // fade in #back-top
+        $(function () {
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 100) {
+                    $('#back-top').fadeIn();
+                } else {
+                    $('#back-top').fadeOut();
+                }
+            });
+    
+            // scroll body to 0px on click
+            $('#back-top a').click(function () {
+                $('body,html').animate({
+                    scrollTop: 0
+                }, 800);
+                return false;
+            });
+        });
+    
+    });
+    </script>
+    <!-- /Back to top -->
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</head>
+
+<body>
+
+
+
+<!-- Header Background -->
+<div id="header-bg"></div>
+
+<div id="sub-header-bg"></div>
+<!-- / Header Background -->	
+
+
+<!-- Main Container -->
+<div id="body-wrapper">
+
+
+
+
+
+	<!-- Header -->
+    <div id="header" >
+
+        <a href="index.html" id="logo"></a>
+        
+        
+        <!-- Navigation -->
+        <ul id="navigation">
+            <li>
+                <a href="index.html">Home</a>
+                <ul>
+                    <li><a href="index2.html">Simple Version</a></li>
+                </ul>
+            </li>
+            
+            
+            <li class="current">
+                <a href="about.html">Features</a>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="columns.html">Columns</a></li>
+                    <li><a href="pricing_tables.html">Pricing Tables</a></li>
+                    <li><a href="shortcodes.html">Shortcodes</a></li>
+                    <li><a href="404.html">404 Page</a></li>
+                    <li><a href="countdown.html">Countdown</a></li>
+                    <li>
+                    	<a href="#">Third Level Item</a>
+                        <ul>                            
+							<li><a href="#">A simple example</a></li>
+							<li><a href="#">Of the third level</a></li>
+							<li><a href="#">Navigation item</a></li> 						
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            
+            
+            
+            <li>
+                <a href="portfolio_4_col.html">Portfolio</a>
+                <ul>
+                    <li><a href="portfolio_4_col.html">4 Columns</a></li>
+                    <li><a href="portfolio_3_col.html">3 Columns</a></li>
+					<li><a href="portfolio_2_col.html">2 Columns</a></li>
+                    <li><a href="portfolio_details.html">Single Project</a></li>
+                    
+                </ul>
+            </li>
+            
+            
+            <li>
+                <a href="news.html">News</a>
+                <ul>
+                    <li><a href="news_post.html">Single Post</a></li>
+                </ul>
+            </li>
+            
+            
+            <li>
+                <a href="contact.html">Contact</a>
+            </li>
+            
+                <span>|</span>
+            
+            
+        </ul>
+        <!-- /Navigation -->   
+        
+    
+    </div>
+    <!-- /Header -->
+    
+    
+    
+    
+    
+    
+    
+    <!-- Content -->
+    <div id="content" class="container clearfix">
+    
+    
+    
+    
+            <!-- Back to top -->
+            <p id="back-top" style="display: block;">
+                <a href="#top"><span></span></a>
+            </p>
+            <!-- /Back to top -->    
+    
+    
+    
+        
+        <!-- Page title -->
+        <nav id="page-title" >
+        
+        	<h1>Shortcodes</h1>
+        
+        </nav>
+        <!-- /Page title -->
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <div class="shortcodes">
+        
+        	
+            <!-- Progress Bar -->
+        	<h4>Progress Bar</h4>        
+        	<br>
+            
+            
+        	<p class="margin-btm">Web Design ( 90% )</p>                            
+            <div class="meter">
+                <span style="width:90%"></span>
+            </div>
+            
+            <p class="margin-btm">Web Development ( 60% )</p>
+            <div class="meter">
+                <span style="width:60%"></span>
+            </div>
+            
+            <p class="margin-btm">Brand Identity ( 80% )</p>
+            <div class="meter">
+                <span style="width:80%"></span>
+            </div>
+            
+            <p class="margin-btm">SEO Optmization ( 50% )</p>
+            <div class="meter">
+                <span style="width:50%"></span>
+            </div>  
+            <!--/Progress Bar -->      
+        
+        	
+            <hr class="h40"><hr class="h40"><hr class="h40"><hr class="h40"><hr class="h40"><hr class="h40">
+            
+            
+        	<!-- Notification Boxes -->
+        	<h4>Notification boxes</h4>        
+        	<br>
+        
+        
+        	<div class="notification success" id="notification_2" style="display: block;">
+			<p><b>Success.</b> You did it, now relax and enjoy it.</p>
+			<a href="#" class="close"></a>
+            </div>
+            
+            <div class="notification error" id="notification_1">            
+			<p><b>Error.</b> Please fill in all the fields required.</p>		
+       		<a href="#" class="close"></a>            
+            </div>
+            
+            <div class="notification warning" id="notification_3" style="display: block;">
+			<p><b>Warning.</b> Change this and that and try again.</p>
+			<a href="#" class="close"></a>
+            </div>
+            
+            <div class="notification notice" id="notification_4" style="display: block;">
+			<p><b>Notice.</b> Please edit the information below.</p>
+			<a href="#" class="close"></a>
+            </div>
+            <!-- /Notification Boxes -->
+            
+            
+            
+            <hr class="h40"><hr class="h40"><hr class="h40"><hr class="h40"><hr class="h40"><hr class="h40">
+             
+             
+            <!-- Tabs --> 
+            <h4>Simple tabs</h4>        
+        	<br>
+            
+			<div class="simpleTabs">
+                <ul class="simpleTabsNavigation">
+                  <li><a href="#">First Tab</a></li>
+                  <li><a href="#">Second</a></li>
+                  <li><a href="#">Third</a></li>
+                </ul>
+		    
+            
+                <div class="simpleTabsContent">
+                <p> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec turpis. Fusce aliquet lorem vitae est. In hac habitasse platea dictumst. Phasellus iaculis facilisis pede. Fusce vulputate elit non magna. Nunc commodo rhoncus dolor. Integer auctor.
+                </p>                  
+                </div>
+                
+                <div class="simpleTabsContent">
+                <p>Proin ullamcorper bibendum tellus. Donec vel ipsum sit amet mi convallis lacinia. Maecenas non nunc bibendum orci commodo aliquam. Integer vel justo. Sed vestibulum semper mi. Vestibulum tincidunt leo at augue. Morbi ut justo. Sed cursus, lorem nec lobortis blandit, urna nisl rhoncus erat, id vulputate dui sem sed erat. 
+                </p>                          
+                </div>
+                
+                <div class="simpleTabsContent">
+                  <p> Vestibulum sit amet arcu a leo dignissim lobortis. Quisque augue neque, adipiscing id, condimentum eu, congue at, pede. Vivamus rhoncus. Aliquam pulvinar justo et ligula. Pellentesque ligula elit, placerat vel, luctus ac, facilisis et, enim. Nulla malesuada venenatis metus. Etiam pellentesque tincidunt diam. Ut et pede. Cras ante. Maecenas sagittis mi vulputate neque. Aenean dignissim justo non lectus. Nulla facilisi. Maecenas enim lorem, lacinia non, bibendum at, varius consectetuer, ipsum. 
+                  </p>
+                </div>
+            
+			</div>
+            <!-- /Tabs --> 
+            
+            
+            
+            <hr class="h40"><hr class="h40"><hr class="h40"><hr class="h40"><hr class="h40"><hr class="h40">
+            
+            
+            
+            <!-- Accordion -->
+            <div class="widget clearfix">
+                <h4>Accordion widget</h4>
+                
+                <div class="accordionButton first">About Us</div>
+                <div class="accordionContent">In hac habitasse platea dictumst. Nam pulvinar, odio sed rhoncus suscipit, sem diam ultrices mauris, eu consequat purus metus eu velit. Proin metus odio, aliquam eget molestie nec, gravida ut sapien. Phasellus quis est sed turpis sollicitudin venenatis sed eu odio. Praesent eget neque eu eros interdum malesuada non vel leo. Sed fringilla porta ligula egestas tincidunt. Nullam risus magna, ornare vitae varius eget, scelerisque a libero.</div>
+                
+                <div class="accordionButton">How we work</div>
+                <div class="accordionContent">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dui orci, dapibus non luctus, ultrices vel nunc. Donec lacinia mattis erat amet.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dui orci, dapibus non luctus, ultrices vel nunc. Donec lacinia mattis erat amet.</div>
+                
+                <div class="accordionButton">References</div>
+                <div class="accordionContent">In hac habitasse platea dictumst. Nam pulvinar, odio sed rhoncus suscipit, sem diam ultrices mauris, eu consequat purus metus eu velit. Proin metus odio, aliquam eget molestie nec, gravida ut sapien. Phasellus quis est sed turpis sollicitudin venenatis sed eu odio. Praesent eget neque eu eros interdum malesuada non vel leo. Sed fringilla porta ligula egestas tincidunt. Nullam risus magna, ornare vitae varius eget, scelerisque a libero.</div>
+                
+                <div class="accordionButton">Contact us</div>
+                <div class="accordionContent">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dui orci, dapibus non luctus, ultrices vel nunc. Donec lacinia mattis erat amet.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dui orci, dapibus non luctus, ultrices vel nunc. Donec lacinia mattis erat amet.</div>
+                
+                
+            </div>
+            <!-- Accordion -->
+            
+            
+            <hr class="h40"><hr class="h40"><hr class="h40">
+        
+        
+        	<!-- Notice Boxes -->
+            <h4>Notice boxes</h4>        
+        	<br>
+        
+        	<div class="large-notice">
+			<h2>This is a Headline</h2>
+			<p>Cras sed odio est, sit amet porttitor elit. Vestibulum elementum erat vitae ante venenatis cursus scelerisque quam vel nibh imperdiet vitae porta lorem posuere.</p><br>
+			<a href="#" class="btn">Read more</a>
+			</div>
+            <!-- /Notice Boxes -->
+            
+            
+            <hr class="h40"><hr class="h40"><hr class="h40"><hr class="h40"><hr class="h40"><hr class="h40"><hr class="h40">
+                        
+            
+            <!-- Slider boxes -->
+            <div class="slidewrap" data-autorotate="5000">
+            
+            	<h4>Slider boxes</h4>
+            
+                <ul class="slidecontrols">
+                    <li><a href="#sliderName" class="next"><img src="images/right.png" alt="" /></a></li>
+                    <li><a href="#sliderName" class="prev"><img src="images/left.png" alt="" /></a></li>
+                </ul>
+                
+                
+                
+                <ul class="slider" id="sliderName">
+                    <li class="slide">
+                    	
+                        <div class="small-notice">
+                        <p>In hac habitasse platea dictumst. Nam pulvinar, odio sed rhoncus suscipit, sem diam ultrices mauris, eu consequat purus metus eu velit. Proin metus odio, aliquam eget molestie nec, gravida ut sapien. Phasellus quis est sed turpis sollicitudin venenatis sed eu odio. Praesent eget neque eu eros interdum malesuada non vel leo. Sed fringilla porta ligula egestas tincidunt. Nullam risus magna, ornare vitae varius eget, scelerisque a libero.
+                        </p>
+                        </div>
+                    </li>
+                    
+                    
+                    
+                    <li class="slide">	
+                        
+                        <div class="small-notice">
+                        <p>In hac habitasse platea dictumst. Nam pulvinar, odio sed rhoncus suscipit, sem diam ultrices mauris, eu consequat purus metus eu velit. Proin metus odio, aliquam eget molestie nec, gravida ut sapien. Phasellus quis est sed turpis sollicitudin venenatis sed eu odio. 
+                        </p>
+                        </div>
+                    </li>
+                    
+                    
+                    
+                    <li class="slide">	
+                        
+                        <div class="small-notice">
+                        <p>In hac habitasse platea dictumst. Nam pulvinar, odio sed rhoncus suscipit, sem diam ultrices mauris, eu consequat purus metus eu velit. Proin metus odio, aliquam eget molestie nec, gravida ut sapien. Phasellus quis est sed turpis sollicitudin venenatis sed eu odio. Praesent eget neque eu eros interdum malesuada non vel leo. Sed fringilla porta ligula egestas tincidunt. Nullam risus magna, ornare vitae varius eget, scelerisque a libero.
+                        </p>
+                        </div>
+                        
+                    </li>
+                    
+                    
+                    
+                    <li class="slide">	
+                        
+                        <div class="small-notice">
+                        <p>In hac habitasse platea dictumst. Nam pulvinar, odio sed rhoncus suscipit, sem diam ultrices mauris, eu consequat purus metus eu velit. Proin metus odio, aliquam eget molestie nec, gravida ut sapien. Phasellus quis est sed turpis sollicitudin venenatis sed eu odio. 
+                        </p>
+                        </div>
+                        
+                    </li>
+                    
+                    
+                    
+                    <li class="slide">	
+                        
+                        <div class="small-notice">
+                        <p>In hac habitasse platea dictumst. Nam pulvinar, odio sed rhoncus suscipit, sem diam ultrices mauris, eu consequat purus metus eu velit. Proin metus odio, aliquam eget molestie nec, gravida ut sapien. Phasellus quis est sed turpis sollicitudin venenatis sed eu odio. Praesent eget neque eu eros interdum malesuada non vel leo. Sed fringilla porta ligula egestas tincidunt. Nullam risus magna, ornare vitae varius eget, scelerisque a libero.
+                        </p>
+                        </div>
+                        
+                    </li>
+                    
+                </ul>              
+                
+            </div>
+            <!-- /Slider boxes -->
+            
+            
+            
+            
+            <hr class="h40"><hr class="h40"><hr class="h40"><hr class="h40"><hr class="h40"><hr class="h40">
+            
+            
+            <!-- Drop Caps -->
+            <h4>Drop Caps</h4>
+            <br>
+            
+            
+            <p><span class="dropcap-blue">D</span>Iidunt quisque tristique. Dolores nemis eros sapien, ultrices primis. This is Emphasized text volutpat tempor tur duis mattis dapibus, felis amet faucibus. fames etiam sit enim fermentum etiam quam eros velit aptent netus faucibus duis lectus integer malesuada, mattis tempus commodoiam molestie taciti eleifend donec fames platea molestie donec, bibendum vehicula nam turpis faucibus, Tncidunt quisqes. Voluptas sadips ipsums amet untras.Sollicitudin eros sapien, ultrices primis. This is Emphasized text volutpat tempor tur duis mattis dapibus, felis amet faucibus. fames etiam sit enim fermentum etiam quam eros velit aptent netus faucibus duis lectus integer malesuada, mattis tempus commodoiam molestie taciti eleifend donec fames platea molestie donec, bibendum vehicula nam turpis faucibus. Iidunt quisque tristique. Dolores nemis eros sapien, ultrices primis. This is Emphasized text volutpat tempor tur duis mattis dapibus, felis amet faucibus.</p>
+                
+            <br><br>
+            
+            <p><span class="dropcap-black">D</span>Iidunt quisque tristique. Dolores nemis eros sapien, ultrices primis. This is Emphasized text volutpat tempor tur duis mattis dapibus, felis amet faucibus. fames etiam sit enim fermentum etiam quam eros velit aptent netus faucibus duis lectus integer malesuada, mattis tempus commodoiam molestie taciti eleifend donec fames platea molestie donec, bibendum vehicula nam turpis faucibus, Tncidunt quisqes. Voluptas sadips ipsums amet untras.Sollicitudin eros sapien, ultrices primis. This is Emphasized text volutpat tempor tur duis mattis dapibus, felis amet faucibus. fames etiam sit enim fermentum etiam quam eros velit aptent netus faucibus duis lectus integer malesuada, mattis tempus commodoiam molestie taciti eleifend donec fames platea molestie donec, bibendum vehicula nam turpis faucibus. Iidunt quisque tristique. Dolores nemis eros sapien, ultrices primis. This is Emphasized text volutpat tempor tur duis mattis dapibus, felis amet faucibus.</p>
+            
+            
+            
+            <br><br>
+            
+            <p><span class="dropcap-blue-box">D</span>Iidunt quisque tristique. Dolores nemis eros sapien, ultrices primis. This is Emphasized text volutpat tempor tur duis mattis dapibus, felis amet faucibus. fames etiam sit enim fermentum etiam quam eros velit aptent netus faucibus duis lectus integer malesuada, mattis tempus commodoiam molestie taciti eleifend donec fames platea molestie donec, bibendum vehicula nam turpis faucibus, Tncidunt quisqes. Voluptas sadips ipsums amet untras.Sollicitudin eros sapien, ultrices primis. This is Emphasized text volutpat tempor tur duis mattis dapibus, felis amet faucibus. fames etiam sit enim fermentum etiam quam eros velit aptent netus faucibus duis lectus integer malesuada, mattis tempus commodoiam molestie taciti eleifend donec fames platea molestie donec, bibendum vehicula nam turpis faucibus. Iidunt quisque tristique. Dolores nemis eros sapien, ultrices primis. This is Emphasized text volutpat tempor tur duis mattis dapibus, felis amet faucibus.</p>
+            
+            <br><br>
+            
+            <p><span class="dropcap-black-box">D</span>Iidunt quisque tristique. Dolores nemis eros sapien, ultrices primis. This is Emphasized text volutpat tempor tur duis mattis dapibus, felis amet faucibus. fames etiam sit enim fermentum etiam quam eros velit aptent netus faucibus duis lectus integer malesuada, mattis tempus commodoiam molestie taciti eleifend donec fames platea molestie donec, bibendum vehicula nam turpis faucibus, Tncidunt quisqes. Voluptas sadips ipsums amet untras.Sollicitudin eros sapien, ultrices primis. This is Emphasized text volutpat tempor tur duis mattis dapibus, felis amet faucibus. fames etiam sit enim fermentum etiam quam eros velit aptent netus faucibus duis lectus integer malesuada, mattis tempus commodoiam molestie taciti eleifend donec fames platea molestie donec, bibendum vehicula nam turpis faucibus. Iidunt quisque tristique. Dolores nemis eros sapien, ultrices primis. This is Emphasized text volutpat tempor tur duis mattis dapibus, felis amet faucibus.</p>
+            <!--/Drop Caps -->
+            
+            
+            
+            <hr class="h40"><hr class="h40"><hr class="h40"><hr class="h40"><hr class="h40"><hr class="h40">
+            
+            
+            <!-- Testimonials -->
+            <h4>Testimonials</h4>
+            <br>            
+            
+            
+            
+            <div class="one-third">
+                            
+                           
+                <div class="testimonial">
+                    <blockquote>
+                        <p>Aenean lacinia bibendum nulla sed consectetur. Curabitur blandit tempus porttitor. Sed posuere consectetur est at lobortis.
+                        </p>
+                    </blockquote>
+                    <p class="black"><strong class="client_identity">Bruce Wayne, Company name</strong></p>
+                </div>
+                
+                <div class="testimonial">
+                    <blockquote>
+                        <p>Aenean lacinia bibendum nulla sed consectetur. Curabitur blandit tempus porttitor. Sed posuere consectetur est at lobortis.
+                        </p>
+                    </blockquote>
+                    <p class="black"><strong class="client_identity">Bruce Wayne, Company name</strong></p>
+                </div>
+                
+            
+            </div>
+            
+            
+            
+             <div class="one-third">
+            
+           
+                <div class="testimonial">
+                    <blockquote>
+                        <p>Aenean lacinia bibendum nulla sed consectetur. Curabitur blandit tempus porttitor. Sed posuere consectetur est at lobortis.
+                        </p>
+                    </blockquote>
+                    <p class="black"><strong class="client_identity">Bruce Wayne, Company name</strong></p>
+                </div>
+                
+                <div class="testimonial">
+                    <blockquote>
+                        <p>Aenean lacinia bibendum nulla sed consectetur. Curabitur blandit tempus porttitor. Sed posuere consectetur est at lobortis.
+                        </p>
+                    </blockquote>
+                    <p class="black"><strong class="client_identity">Bruce Wayne, Company name</strong></p>
+                </div>
+                
+            
+            </div>
+            
+            
+            
+             <div class="one-third last">
+            
+           
+                <div class="testimonial">
+                    <blockquote>
+                        <p>Aenean lacinia bibendum nulla sed consectetur. Curabitur blandit tempus porttitor. Sed posuere consectetur est at lobortis.
+                        </p>
+                    </blockquote>
+                    <p class="black"><strong class="client_identity">Bruce Wayne, Company name</strong></p>
+                </div>
+                
+                <div class="testimonial">
+                    <blockquote>
+                        <p>Aenean lacinia bibendum nulla sed consectetur. Curabitur blandit tempus porttitor. Sed posuere consectetur est at lobortis.
+                        </p>
+                    </blockquote>
+                    <p class="black"><strong class="client_identity">Bruce Wayne, Company name</strong></p>
+                </div>
+                
+            
+            </div>
+            <!--/Testimonials -->
+            
+            
+            
+            
+            <hr class="h40"><hr class="h40"><hr class="h40"><hr class="h40"><hr class="h40"><hr class="h40">
+            
+            
+            
+            
+            
+            <!-- Buttons -->
+            <h4>Buttons</h4>
+            <br>
+            
+            <a href="#" class="btn">Blue simple button</a>
+            
+            <br><br>
+            
+            <a href="#" class="btn-image">Blue simple button with icon</a>
+            
+            <br><br>
+            
+            <a href="#" class="btn black">Black simple button</a>
+            
+            <br><br>
+            
+            <a href="#" class="btn-image black">Black simple button with icon</a>
+			
+            <!-- /Buttons -->
+            
+            
+            <hr class="h40"><hr class="h40"><hr class="h40"><hr class="h40"><hr class="h40"><hr class="h40">
+            
+            
+            <!-- blockquote -->
+            <h4>Blockquote</h4>
+            <br>
+            
+            <blockquote>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent et ipsum tellus, vitae sagittis enim. Morbi ultricies ultrices elit vitae gravida. Pellentesque in risus neque, et vulputate massa. Phasellus nec velit sed diam euismod consequat. Maecenas posuere volutpat purus, vel vulputate ipsum commodo eget.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent et ipsum tellus, vitae sagittis enim. Morbi ultricies ultrices elit vitae gravida. 
+            </blockquote>
+            
+            <!-- /blockquote -->
+            
+            
+                               
+            <hr class="h40"><hr class="h40"><hr class="h40"><hr class="h40"><hr class="h40"><hr class="h40">
+            
+            
+            <!-- Headings -->
+            <h4>Headings</h4>
+            <br>
+            
+        	<h1>H1 Heading</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae est sed quam vehicula condimentum. Donec non vulputate diam. Maecenas sed purus id quam dictum dictum ut eu tortor. Vestibulum non lectus ut dui vulputate semper. Fusce orci augue, tempor nec egestas ut, suscipit sit amet nunc. Nullam mollis tristique diam sit amet placerat.</p>
+            
+            <br><br>
+            
+            <h2>H2 Heading</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae est sed quam vehicula condimentum. Donec non vulputate diam. Maecenas sed purus id quam dictum dictum ut eu tortor. Vestibulum non lectus ut dui vulputate semper. Fusce orci augue, tempor nec egestas ut, suscipit sit amet nunc. Nullam mollis tristique diam sit amet placerat.</p>
+            
+            <br><br>
+            
+            <h3>H3 Heading</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae est sed quam vehicula condimentum. Donec non vulputate diam. Maecenas sed purus id quam dictum dictum ut eu tortor. Vestibulum non lectus ut dui vulputate semper. Fusce orci augue, tempor nec egestas ut, suscipit sit amet nunc. Nullam mollis tristique diam sit amet placerat.</p>
+            
+            <br><br>
+            
+            <h4>H4 Heading</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae est sed quam vehicula condimentum. Donec non vulputate diam. Maecenas sed purus id quam dictum dictum ut eu tortor. Vestibulum non lectus ut dui vulputate semper. Fusce orci augue, tempor nec egestas ut, suscipit sit amet nunc. Nullam mollis tristique diam sit amet placerat.</p>
+            
+            <br><br>
+            
+            <h5>h5 Heading</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae est sed quam vehicula condimentum. Donec non vulputate diam. Maecenas sed purus id quam dictum dictum ut eu tortor. Vestibulum non lectus ut dui vulputate semper. Fusce orci augue, tempor nec egestas ut, suscipit sit amet nunc. Nullam mollis tristique diam sit amet placerat.</p>
+            <!--/Headings -->
+            
+            
+            <hr class="h40"><hr class="h40"><hr class="h40"><hr class="h40"><hr class="h40"><hr class="h40">
+            
+            
+            <!-- Square Icons -->
+            <h4>Square Icons</h4>
+            <br>
+            
+            
+            <div class="feature-icon"><img alt="" src="images/services_icon_01.png"></div>
+            
+            <div class="feature-icon"><img alt="" src="images/services_icon_02.png"></div>
+            
+            <div class="feature-icon"><img alt="" src="images/services_icon_03.png"></div>
+            
+            <div class="feature-icon"><img alt="" src="images/services_icon_04.png"></div>
+            
+            <div class="feature-icon"><img alt="" src="images/services_icon_05.png"></div>
+            
+            <div class="feature-icon"><img alt="" src="images/services_icon_06.png"></div>
+            
+            <div class="feature-icon"><img alt="" src="images/services_icon_07.png"></div>
+            
+            <div class="feature-icon"><img alt="" src="images/services_icon_08.png"></div>
+            
+            <div class="feature-icon"><img alt="" src="images/services_icon_09.png"></div>
+            
+            <div class="feature-icon"><img alt="" src="images/services_icon_10.png"></div>
+            
+            <div class="feature-icon"><img alt="" src="images/services_icon_11.png"></div>
+            
+            <div class="feature-icon"><img alt="" src="images/services_icon_12.png"></div>
+            
+            <div class="feature-icon"><img alt="" src="images/services_icon_13.png"></div>
+            
+            <div class="feature-icon"><img alt="" src="images/services_icon_14.png"></div>
+            
+            <div class="feature-icon"><img alt="" src="images/services_icon_15.png"></div>
+            
+            <div class="feature-icon"><img alt="" src="images/services_icon_16.png"></div>
+            
+            <div class="feature-icon"><img alt="" src="images/services_icon_17.png"></div>
+            
+            <div class="feature-icon"><img alt="" src="images/services_icon_18.png"></div>
+            
+            <div class="feature-icon"><img alt="" src="images/services_icon_19.png"></div>
+            
+            
+            <!-- Square Icons -->
+                        
+            
+            <hr class="h40"><hr class="h40"><hr class="h40"><hr class="h40"><hr class="h40"><hr class="h40">
+            
+            
+            <!-- Lists Style -->
+            <h4>Lists Style</h4>
+            <br>
+            
+            
+            <div class="one-third">
+                
+                
+            <ul class="square-list">
+              <li>Square List - Lorem Ipsum is simply text</li>
+            </ul><!-- End square-list -->
+            
+            <ul class="check-list">
+              <li>Check List - Lorem Ipsum is simply text</li>
+            </ul><!-- End check-list -->
+            
+            <ul class="plus-list">
+              <li>Plus List - Lorem Ipsum is simply text</li>
+            </ul><!-- End plus-list -->
+            
+            
+            </div>
+            
+            
+            
+            <div class="one-third">
+            
+            
+            <ul class="arrow-list">
+              <li>Arrow List - Lorem Ipsum is simply text</li>
+            </ul><!-- End arrow-list -->
+            
+            <ul class="cross-list">
+              <li>Cross List - Lorem Ipsum is simply text</li>
+            </ul><!-- End cross-list -->
+            
+            <ul class="star-list">
+              <li>Star List - Lorem Ipsum is simply text</li>
+            </ul><!-- End star-list -->
+            
+            
+            </div>
+            
+            
+            
+            <div class="one-third last">
+            
+            
+            <ul class="minus-list">
+              <li>Minus List - Lorem Ipsum is simply text</li>
+            </ul><!-- End minus-list -->
+            
+            <ul class="arrow2-list">
+              <li>Arrow2 List - Lorem Ipsum is simply text</li>
+            </ul><!-- End arrow2-list -->
+            
+            <ul class="circle-list">
+              <li>Circle List - Lorem Ipsum is simply text</li>
+            </ul><!-- End circle-list -->                
+            
+            
+            </div>
+            <!-- Lists Style -->
+            
+            
+            
+            
+            
+        
+        
+        
+        </div>
+        <!-- /Right content -->
+        
+        
+        
+        
+        
+        
+        
+               
+        
+        
+        
+        
+        
+        
+        
+        
+				
+                
+                
+        
+        
+        
+    
+    </div>
+        
+    <!-- /Content -->
+
+		
+        
+
+    
+        
+</div>
+<!-- /Main Container -->        
+
+
+<!-- Footer -->
+        <div id="footer" class="clearfix">
+        
+        	<div id="footer-center" class="container">
+            
+            	<div class="footer-left">
+                	
+                    <ul class="footer-menu">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Features</a></li>
+                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#">News</a></li>
+                        <li class="footer-last"><a href="#">Contact</a></li>
+                    </ul>
+                    
+                   
+                    
+                    <ul class="footer-address">
+                    	<li><img src="images/home-icon.png"/>314 Columbus Ave. , San Francisco , CA 94133 </li>
+                        <li><img src="images/phone-icon.png"/>(123) 456-78910</li>
+                        <li><img src="images/email-icon.png"/>office@creative.com</li>
+               		</ul>
+                
+                </div>	
+                
+                
+                <div class="footer-right" id="footer-newsletter">
+                
+                	
+                    <p>Newsletter</p>
+                    <form id="newsletter"  method="post">
+                        <input type="text" onfocus="if(this.value == 'E-mail here') { this.value = ''; }" onblur="if(this.value == '') { this.value = 'E-mail here'; }" value="E-mail here" class="newsletter">
+                        <button type="submit">Submit</button>
+                    </form>
+                
+                </div>
+                
+                
+            
+            </div>
+            
+            
+            
+            
+            <div id="footer-bottom">
+            
+            	<div id="footer-center-bottom" class="container">
+            
+            	<!-- Copyright -->
+                <ul class="copyright">
+                    <li>2012 © Creative Media. All rights reserved</li>
+                </ul>
+                <!-- /Copyright -->
+    
+                <!-- Social Links -->
+                <ul class="social-links">                   
+                    <li class="facebook"><a href="#">Facebook</a></li>
+                    <li class="twitter"><a href="#">Twitter</a></li>
+                    <li class="vimeo"><a href="#">Vimeo</a></li>
+                    <li class="linkedin"><a href="#">LinkedIn</a></li>
+                    <li class="dribble"><a href="#">Dribbleo</a></li>
+                    <li class="google"><a href="#">Google</a></li>
+                </ul>
+                <!-- /Social Links -->
+                
+                </div>
+            
+            </div>
+            
+            
+            
+            
+        
+        </div>
+        <!-- /Footer -->
+        
+        
+        <!-- CSS Switcher - Remove this -->
+        <div id="settings">
+    		<a class="colorbox colorblue" href="javascript:chooseStyle('none', 60)" checked="checked"></a>
+			<a class="colorbox colorgreen" href="javascript:chooseStyle('green-theme', 60)"></a>
+			<a class="colorbox colororange" href="javascript:chooseStyle('orange-theme', 60)"></a>   
+  		</div>
+        <!--/CSS Switcher - Remove this -->
+
+
+
+</body>
+</html>
